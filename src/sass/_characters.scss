@@ -1,0 +1,24 @@
+@import './mixins';
+
+h4{
+    @include paddingText;
+}
+
+ul{
+    list-style-type: none;
+    padding-bottom: 5px;
+    li{
+        padding-left: 15px;
+        width: 85%;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+
+
+img{
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px #888888;
+}
+
