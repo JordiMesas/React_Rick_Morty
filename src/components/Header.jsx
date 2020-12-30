@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classNames from 'classnames';
+import ThemeContext from '../context/ThemeContext';
 
 
 const Header = (props) => {
@@ -8,10 +9,12 @@ const Header = (props) => {
         return  props.darkMode===true;
     }
 
+    const color = useContext(ThemeContext);
+
     return(
         <header className="d-flex flex-column flex-sm-row justify-content-around p-4">
             
-            <h1 className={classNames({ 'color-dark': colorDark()})}>
+            <h1 style={{color}} className={classNames({ 'color-dark': colorDark()})}>
                 ReactHooks - {props.darkMode ?
                 'Dark Mode':                                                          
                 'Light Mode'}  

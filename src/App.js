@@ -6,18 +6,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 // import './App.css';
 
-function App() {
+function App() {  
+
   const [darkMode, setDarkMode] = useState(false);
   
   return (
+    
     <div className={classNames({
       'bg-dark': darkMode===true,                                           
     })} >     
-        <div className="container">
+        <div className="container">       
           <Header onHandleClick={() => setDarkMode(!darkMode)} darkMode={darkMode}/>
-          <Characters darkMode={darkMode} />      
+          <Characters darkMode={darkMode} />               
        </div>
     </div>
+    
   );
 }
 
