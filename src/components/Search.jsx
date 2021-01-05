@@ -6,6 +6,7 @@ const Search = ({search, searchInput,handleSearch, colorDark}) => {
 		<div className='col-12 col-md-6 p-4'>
             <h5 className={classNames({ 'color-white': colorDark() })}>Search:</h5>
 			<input
+                className='input-group-text'
 				type='text'
 				value={search}
 				ref={searchInput}
